@@ -1,0 +1,943 @@
+<!DOCTYPE html><html lang="es" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#d3e4fe",
+          "tertiary-fixed": "#6ffbbe",
+          "on-tertiary": "#ffffff",
+          "primary-fixed-dim": "#8ed6aa",
+          "on-secondary": "#ffffff",
+          "error-container": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-primary-container": "#8ad2a7",
+          "surface-container": "#e5eeff",
+          "surface": "#f8f9ff",
+          "surface-container-highest": "#d3e4fe",
+          "inverse-on-surface": "#eaf1ff",
+          "outline": "#707971",
+          "surface-container-low": "#eff4ff",
+          "surface-dim": "#cbdbf5",
+          "on-secondary-fixed": "#00164e",
+          "on-error-container": "#93000a",
+          "on-surface-variant": "#404942",
+          "primary-fixed": "#a9f3c5",
+          "on-surface": "#0b1c30",
+          "primary-container": "#0d5c3a",
+          "on-primary": "#ffffff",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-tint": "#226b47",
+          "primary": "#004328",
+          "on-tertiary-container": "#49da9f",
+          "inverse-surface": "#213145",
+          "surface-bright": "#f8f9ff",
+          "secondary": "#4059aa",
+          "outline-variant": "#bfc9c0",
+          "background": "#f8f9ff",
+          "on-primary-fixed": "#002111",
+          "surface-container-high": "#dce9ff",
+          "on-background": "#0b1c30",
+          "on-tertiary-fixed": "#002113",
+          "secondary-fixed-dim": "#b6c4ff",
+          "on-primary-fixed-variant": "#005232",
+          "error": "#ba1a1a",
+          "secondary-fixed": "#dce1ff",
+          "on-tertiary-fixed-variant": "#005236",
+          "tertiary": "#00422b",
+          "secondary-container": "#8fa7fe",
+          "surface-container-lowest": "#ffffff",
+          "inverse-primary": "#8ed6aa",
+          "on-secondary-container": "#1d3989",
+          "on-secondary-fixed-variant": "#264191",
+          "tertiary-container": "#005c3e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "margin-desktop": "2.5rem",
+          "space-base": "1rem",
+          "space-md": "0.75rem",
+          "space-2xs": "0.125rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "space-2xl": "3rem",
+          "gutter-desktop": "1.5rem",
+          "gutter-mobile": "1rem",
+          "margin-mobile": "1rem",
+          "space-3xl": "4.5rem"
+        },
+        "fontFamily": {
+          "metric-display-mobile": [
+            "JetBrains Mono"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "metric-display": [
+            "JetBrains Mono"
+          ],
+          "metric-md": [
+            "JetBrains Mono"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "metric-sm": [
+            "JetBrains Mono"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "mono-caption": [
+            "JetBrains Mono"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "metric-display-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "metric-display": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "metric-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "metric-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "mono-caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-base"><a href="{{DATA:SCREEN:SCREEN_14}}" class="flex items-center gap-space-md group"><img src="https://lh3.googleusercontent.com/aida/AEtjO1URiWD1evqt_h-OGGMpZRC_h60nlxF4czgUKAjShrJGhguKeYkKX-mKwRkGX-YIvnv6138P_R9Gv7iOYV6hfDH6Bhh7MAIr8H455J3XdUroG59K2AQn5BcYmQMqBGItd2ZnEbELbW-NMG3eqVaL6pTkLMqxGjgd_tCbtvEEbeoVB5fBsYMmPF4Fkg8aO0VMJ3KvXAyDojhJ5fNNFpRmcT-f9rU_Y9vr9dx1nsNEFiDE8-isq6HYUqcz0iE" alt="RGM Advisor Logo" class="w-9 h-9 rounded-lg object-contain shadow-sm"><div class="hidden sm:flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight font-bold tracking-tight group-hover:text-primary transition-colors">RGM Advisor</span><span class="font-mono-caption text-mono-caption text-on-surface-variant uppercase tracking-wider">Pricing Analytics &amp; Strategy</span></div></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-on-surface font-bold"><a aria-current="page" class="transition-colors text-on-surface font-bold" data-path="pilares-rgm" href="#casos-impacto">Pilares RGM</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="metodologia" href="{{DATA:SCREEN:SCREEN_2}}">Metodología</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="metricas-kpis" href="#">Métricas &amp; KPIs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="casos-de-exito" href="#casos-impacto">Casos de Éxito</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto" href="#contacto-ejecutivo">Contacto</a></nav><div class="flex items-center gap-space-base"><a class="inline-flex items-center justify-center bg-primary-container text-on-primary hover:bg-primary px-space-base py-space-sm rounded-lg font-label-md text-label-md transition-all shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]" data-path="contacto" href="#contacto-ejecutivo">Agendar Sesión</a><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/30" src="https://lh3.googleusercontent.com/aida/AEtjO1VyPKyvw6Gv8KARSvSu0oxKXCHxGnz0ayNIiLa17YIrV4iI-A9U6C5jP2oY-66IXoNZKOcAk-FnxgwO23HBUqnWQS-YOsp-IukolvIaCt1kEcvDwsEJfM_d7v-h5tlgWjLF2besSRvJu_vxMIjp1GxIOEGBe2M36DaovEr_Y7EAZTyQhkUUywWVj2RdGxqRrx81H6Y8PghHo-GPVzkDQtU0U7HN-x55MmzIiSRqhdic6bqy54KWDoFunQQ"></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- ==================== HERO SECTION: EXECUTIVE BRAND POSITIONING & LIVE KPI ENGINE ==================== -->
+<section class="relative w-full overflow-hidden bg-surface pt-space-xl pb-space-3xl">
+<!-- Ambient subtle background depth blurs -->
+<div class="absolute top-12 left-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute bottom-10 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<!-- Top Credentials Badges -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-base">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-primary font-mono-caption text-mono-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+          Senior RGM &amp; Pricing Analytics Advisor
+        </span>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-lg bg-surface-container text-on-surface-variant font-mono-caption text-mono-caption">
+<span class="material-symbols-outlined text-[14px]">corporate_fare</span>
+          Ex-Fortune 500 CPG &amp; Retail Consultant
+        </span>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-secondary font-mono-caption text-mono-caption">
+<span class="material-symbols-outlined text-[14px]">timeline</span>
+          12+ Años de Experiencia Cuantitativa
+        </span>
+</div>
+<!-- Main Asymmetric Headline & Pitch Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<div class="lg:col-span-7 flex flex-col justify-center">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-[1.08] mb-space-md">
+            Transformo datos masivos y patrones de consumo en <span class="text-primary-container">estrategias rentables</span> de crecimiento y precios.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl">
+            Optimización estratégica de ingresos fundamentada en rigurosidad cuantitativa, econometría aplicada, consumer insights y shopper analytics para líderes de consumo masivo y retail.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-base mb-space-2xl">
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary hover:bg-primary px-space-xl py-space-md rounded-lg font-label-md text-label-md transition-all shadow-md" href="#casos-impacto">
+<span class="">Ver Casos de Impacto</span>
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-secondary text-on-secondary hover:bg-on-secondary-container px-space-xl py-space-md rounded-lg font-label-md text-label-md transition-all shadow-sm" href="#contacto-ejecutivo">
+<span class="">Agenda Consultoría</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</a>
+</div>
+<!-- Quick Executive Endorsements -->
+<div class="flex items-center gap-space-xl pt-space-xs border-0">
+<div class="flex items-center -space-x-2">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm bg-surface-container-highest" data-alt="Corporate headshot of a female Chief Commercial Officer in enterprise CPG, modern studio lighting with cool slate and neutral professional tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMTUOe6q3Ahdw_-fx1qmbK8XEykVR5TdFY8mHOvPCFzRPJa8bnc855cVZrhKGoxfRmyOmnqFkWk_r4TpWOwGzO50JS44TDK3j83D532apxBTrcYtfKUGVOWUh0JQbAwCN2I85x-UUxYuG7rm1g-DvvkoaTPJIv2_Ev9qCY-6Xq5NbX74tS7HoHYRQipUjQxbf8DQwcECatgATJ6KjzTP-4k9_f1PgyDAbq5RVxT03xD7VVhXRNowWO">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm bg-surface-container-highest" data-alt="Portrait of a male VP of Revenue Management smiling in front of financial boardroom glass, crisp executive lighting and modern corporate setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA71mjR6S6jETpE_w5F4kc6LHQldbXSGvrBdSIG7kDrjgNCqa9YKpSiHpw9wGIpWBXsO4bcP26HtGb-P6RJB-cND0JHtg0c_2u7rwElr6MhVurP4gkrIhi4JUO396f4qWTouVf7UGj3FJbotiKCyzgVBbDA9LpHiuFrj66u-NYcINZPNQHpHthGCvcEdzz4WRESva0tQuBuRaVzc8zZZzVDhE3Xoume6rfqiVi51BA8M9uYNBT8K5Wx">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm bg-surface-container-highest" data-alt="Headshot of a senior director of pricing strategy and analytics, executive boardroom environment with soft cinematic depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyHO9UvR1uPq56jUh1CJYrSoR04xvtHVYrrKzkSBlibXFghx0oG-TYZ9sojKMBagT17VHPclUcoBYdOAKWK98WHibQ-f-om-bpjBpzGAanqLEXlkpI2romoHU7oCGmMbtVGVOmKWarwt0JE35s5zlGGP1XF0sFEJoVJBRx1MGVa_-q1F44BrHvgWicyb4QCkR5L26f4wr9Qe0DXIfI66c1hl3z8oEsC4SkReSbE2T-2oPQDOZkjvx">
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Validado por C-Levels &amp; VPs de RGM</span>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Líderes de marcas globales en LATAM, USA y Europa</span>
+</div>
+</div>
+</div>
+<!-- Right Side: High-Density Interactive Visual Engine -->
+<div class="lg:col-span-5 flex flex-col gap-space-md w-full">
+<!-- Live KPI Matrix (4 cards) -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Margen Bruto</span>
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-primary font-metric-sm text-metric-sm">
+                  +18.4%
+                </span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface tracking-tight font-bold">
+                +18.4%
+              </div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant mt-space-2xs">vs. benchmark CPG/Retail</span>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Promo ROI</span>
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-lg bg-surface-container text-secondary font-metric-sm text-metric-sm">
+                  3.8x
+                </span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface tracking-tight font-bold">
+                3.8x
+              </div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant mt-space-2xs">Trade Promotion Opt.</span>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Elasticidad</span>
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-primary font-metric-sm text-metric-sm">
+                  -0.82
+                </span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface tracking-tight font-bold">
+                -0.82
+              </div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant mt-space-2xs">Inelástico / Margen blindado</span>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Valor Neto</span>
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-primary font-metric-sm text-metric-sm font-semibold">
+                  +$42M
+                </span>
+</div>
+<div class="font-metric-display text-metric-display text-on-surface tracking-tight font-bold">
+                $42M+
+              </div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant mt-space-2xs">Capturado en Portfolio Mix</span>
+</div>
+</div>
+<!-- Interactive Elasticity Curve Simulator Widget -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-md flex flex-col">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase">Curva de Elasticidad RGM vs. Base</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-space-2xs rounded-lg bg-surface-container text-secondary font-mono-caption text-mono-caption hover:bg-surface-container-high transition-colors" id="simToggleBtn" onclick="toggleSimulation()">
+                  Alternar Simulación (+4.5% Lift)
+                </button>
+</div>
+</div>
+<!-- Micro SVG Chart -->
+<div class="w-full h-44 my-space-xs relative flex items-center justify-center">
+<svg class="w-full h-full overflow-visible" viewBox="0 0 400 160">
+<!-- Grid background subtle bars -->
+<line stroke="#d3e4fe" stroke-dasharray="3,3" stroke-width="0.8" x1="40" x2="380" y1="20" y2="20"></line>
+<line stroke="#d3e4fe" stroke-dasharray="3,3" stroke-width="0.8" x1="40" x2="380" y1="60" y2="60"></line>
+<line stroke="#d3e4fe" stroke-dasharray="3,3" stroke-width="0.8" x1="40" x2="380" y1="100" y2="100"></line>
+<line stroke="#cbdbf5" stroke-width="1" x1="40" x2="380" y1="140" y2="140"></line>
+<!-- Axes labels -->
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="35" y="24">$1.4M</text>
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="35" y="64">$1.1M</text>
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="35" y="104">$0.8M</text>
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" x="45" y="154">P0 (-15%)</text>
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" x="180" y="154">P-Base</text>
+<text fill="#707971" font-family="JetBrains Mono" font-size="9" x="340" y="154">P-Opt (+12%)</text>
+<!-- Base Demand Curve (Gray / Muted Blue) -->
+<path d="M 45 35 Q 160 85 370 135" fill="none" opacity="0.6" stroke="#707971" stroke-dasharray="4,4" stroke-width="2"></path>
+<!-- Optimized Demand Curve (Forest Green Primary) -->
+<path class="transition-all duration-700" d="M 45 45 Q 180 50 370 100" fill="none" id="optCurve" stroke="#0d5c3a" stroke-width="3"></path>
+<!-- Intersection Point: Net Revenue Sweet Spot -->
+<circle class="shadow-sm" cx="240" cy="62" fill="#0d5c3a" id="optPoint" r="5"></circle>
+<circle class="animate-ping" cx="240" cy="62" fill="#a9f3c5" opacity="0.3" r="9"></circle>
+<!-- Annotation callout -->
+<rect fill="#0b1c30" height="24" rx="4" width="130" x="220" y="22"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" font-weight="600" x="226" y="38">Opt: Elasticidad -0.74</text>
+</svg>
+</div>
+<!-- Dynamic Simulator Stats Bar -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Precio Sugerido</span>
+<span class="font-metric-sm text-metric-sm font-semibold text-on-surface" id="statPrice">$24.80 / pack</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Margen Neto Unit.</span>
+<span class="font-metric-sm text-metric-sm font-semibold text-primary" id="statMargin">34.2% (+520 bps)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Riesgo Canibalización</span>
+<span class="font-metric-sm text-metric-sm font-semibold text-secondary">&lt; 2.1% Monitoreado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 2: CORE RGM LEVERS & CAPABILITIES (2x2 / 4-Col Grid) ==================== -->
+<section class="w-full py-space-3xl bg-surface-container-low" id="casos-impacto">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<!-- Section Title Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-base">
+<div class="max-w-2xl">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Pilares Estratégicos</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">
+            Las 4 Palancas del Revenue Growth Management Moderno
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Estructuración algorítmica de decisiones comerciales para optimizar los esfuerzos y capturar y brindar más valor</p>
+</div>
+<!-- 4 Capability Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Lever 1: Pricing Strategy -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-base">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">price_change</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-primary font-mono-caption text-mono-caption font-bold">
+                +4.2% Net Price
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-2xs">
+              Pricing Strategy &amp; Architecture
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mb-space-md">
+              Pricing Analytics &amp; Curvas de Disposición a Pagar (WTP)
+            </p>
+<ul class="space-y-space-xs mb-space-lg">
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Modelos econométricos bayesianos y de elección discreta.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Segmentación de listas de precios por formato de canal y región geográfica.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Monitoreo de elasticidad cruzada y anticipación de respuesta competitiva.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Impacto Clave:</span>
+<div class="font-metric-sm text-metric-sm font-semibold text-on-surface">+4.2% Net Price Realization sostenido</div>
+</div>
+</div>
+<!-- Lever 2: Promotion Optimization -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-base">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">percent</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-lg bg-surface-container text-secondary font-mono-caption text-mono-caption font-bold">
+                -24% Desperdicio
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-2xs">
+              Promotion Optimization &amp; Elasticity
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mb-space-md">
+              Trade Promotion Effectiveness &amp; Eficiencia de Descuento
+            </p>
+<ul class="space-y-space-xs mb-space-lg">
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Curvas de profundidad promocional óptima y umbrales de saturación.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Reducción de gasto subsidiado ineficiente en compras habituales de base.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Análisis de efecto "Halo" en la categoría vs. canibalización de SKUs propios.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Impacto Clave:</span>
+<div class="font-metric-sm text-metric-sm font-semibold text-on-surface">-24% Desperdicio Promocional Trade</div>
+</div>
+</div>
+<!-- Lever 3: Mix & Pack-Size Architecture -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-base">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-primary font-mono-caption text-mono-caption font-bold">
+                +12% Penetración
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-2xs">
+              Mix &amp; Pack-Size Architecture
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mb-space-md">
+              Shopper &amp; Consumer Insights Aplicados al Portafolio
+            </p>
+<ul class="space-y-space-xs mb-space-lg">
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Estrategia de 'Price-Pack Architecture' (PPA) multidimensional.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Mapeo de ocasiones de consumo vs. bandas de precio de entrada y premium.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Downsizing estratégico y valor agregado para blindar márgenes en inflación.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Impacto Clave:</span>
+<div class="font-metric-sm text-metric-sm font-semibold text-on-surface">+12% Penetración en Hogares (Panel)</div>
+</div>
+</div>
+<!-- Lever 4: Trade Terms & Commercial Execution -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-base">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-lg bg-surface-container text-secondary font-mono-caption text-mono-caption font-bold">
+                +3.1 pts Margen
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-2xs">
+              Trade Terms &amp; Execution
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mb-space-md">
+              Condiciones Comerciales &amp; Pay-for-Performance
+            </p>
+<ul class="space-y-space-xs mb-space-lg">
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Estructura estricta de descuentos condicionales vs. incondicionales.</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Auditoría de 'Price Waterfall' (fuga de ingresos factura a neto-neto).</span>
+</li>
+<li class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+<span class="">Acuerdos JBP con retailers vinculados a metas verificables de sell-out.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Impacto Clave:</span>
+<div class="font-metric-sm text-metric-sm font-semibold text-on-surface">+3.1 pts Margen Neto Realizado</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 3: QUANTITATIVE METHODOLOGY & DATA STACK ==================== -->
+<section class="w-full py-space-3xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-lg bg-surface-container mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">hub</span>
+<span class="font-mono-caption text-mono-caption text-secondary uppercase font-semibold">End-to-End Analytics Pipeline</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold mb-space-sm">
+          Metodología Cuantitativa de Datos a Realización de Ingresos
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Un proceso sistemático y auditable que une la ingesta de transacciones crudas a nivel ticket con la gobernanza de precios en el punto de venta.
+        </p>
+</div>
+<!-- 3-Step Horizontal Connected Pipeline Component -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-base">
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-primary font-bold">
+                FASE 01
+              </span>
+<span class="material-symbols-outlined text-outline text-[24px]">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">
+              Ingesta de Datos Masivos (Big Data Stack)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-base">
+              Procesamiento automatizado de sell-out POS de retailers, paneles sindicados de consumidores (Nielsen/Kantar), transacciones a nivel ticket y costos directos e indirectos normalizados en Snowflake y Databricks.
+            </p>
+</div>
+<div>
+<div class="font-mono-caption text-mono-caption text-on-surface-variant uppercase mb-space-xs font-semibold">Tech &amp; Data Specs</div>
+<div class="flex flex-wrap gap-space-2xs">
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">SQL / dbt</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">BigQuery</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">POS Scanner</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Python / R</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-base">
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container text-secondary font-bold">
+                FASE 02
+              </span>
+<span class="material-symbols-outlined text-secondary text-[24px]">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">
+              Análisis de Patrones &amp; Modelado Econométrico
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-base">
+              Entrenamiento de algoritmos de Machine Learning y formulación de regresiones log-lineales para cuantificar coeficientes de elasticidad propia y cruzada, además de curvas empíricas de disposición a pagar (WTP).
+            </p>
+</div>
+<div>
+<div class="font-mono-caption text-mono-caption text-on-surface-variant uppercase mb-space-xs font-semibold">Analytical Frameworks</div>
+<div class="flex flex-wrap gap-space-2xs">
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Bayesian Modeling</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">XGBoost Regression</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Elasticity Matrix</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Conjoint Studies</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-base">
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-primary font-bold">
+                FASE 03
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">
+              Ejecución de Estrategias de Precios &amp; RGM
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-base">
+              Despliegue de matrices dinámicas de precios recomendados, reprogramación del calendario promocional anual y gobierno de precios empoderado para la fuerza comercial y las negociaciones retail.
+            </p>
+</div>
+<div>
+<div class="font-mono-caption text-mono-caption text-on-surface-variant uppercase mb-space-xs font-semibold">Governance &amp; Tools</div>
+<div class="flex flex-wrap gap-space-2xs">
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Price Waterfall</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">JBP Scorecards</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">PowerBI Cockpit</span>
+<span class="font-mono-caption text-mono-caption px-space-xs py-space-2xs rounded-lg bg-surface-container text-on-surface">Tableau Real-Time</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 4: SEO METADATA TRANSPARENCY / KNOWLEDGE GRAPH ==================== -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">manage_search</span>
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">
+              SEO Indexation &amp; Structured Knowledge Graph
+            </span>
+</div>
+<span class="inline-flex items-center gap-space-2xs font-mono-caption text-mono-caption bg-surface-container px-space-sm py-space-2xs rounded-lg text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">code</span>
+            Schema: Person / ProfessionalService (JSON-LD)
+          </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Crawler Metadata Preview (Left) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm bg-surface-container-low p-space-base rounded-lg">
+<div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant uppercase font-semibold">Title Tag Indexado</span>
+<p class="font-body-sm text-body-sm font-semibold text-secondary mt-space-2xs">
+                Experto en Pricing Analytics &amp; Revenue Growth Management | Analítica de Precios
+              </p>
+</div>
+<div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant uppercase font-semibold">Meta Description</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Transformación de datos masivos y patrones de consumo en estrategias rentables de crecimiento y precios mediante Data Analytics y RGM.
+              </p>
+</div>
+<div class="pt-space-2xs flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-primary font-mono-caption text-mono-caption">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Canonical Verified
+              </div>
+<div class="flex items-center gap-space-2xs text-primary font-mono-caption text-mono-caption">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Schema Validated
+              </div>
+<div class="flex items-center gap-space-2xs text-on-surface-variant font-mono-caption text-mono-caption">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+                LCP: 0.74s
+              </div>
+</div>
+</div>
+<!-- Core Keywords Chips (Right) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant uppercase font-semibold block mb-space-xs">
+                Core Indexed Knowledge Entities &amp; Keywords
+              </span>
+<div class="flex flex-wrap gap-space-2xs">
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Revenue Growth Management</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Pricing Analytics</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Data Analytics</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Experto en analítica de precios</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">RGM levers</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Elasticidad de la Demanda</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Price-Pack Architecture</span>
+<span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface">Trade Terms Optimization</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Ontology Target: Global Consumer Packaged Goods &amp; Omnichannel Commerce</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 5: CONTACT & ENTERPRISE INQUIRIES ==================== -->
+<section class="w-full py-space-3xl bg-surface" id="contacto-ejecutivo">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Side: Executive Summary & Direct Channels -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-xl flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-lg bg-surface-container text-primary font-mono-caption text-mono-caption font-bold mb-space-base">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+              Confidencialidad Corporativa (NDA Estándar)
+            </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold mb-space-sm">
+              Hablemos de tu estrategia de precios y crecimiento.
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-xl">
+              Auditoría inicial de fuga de ingresos (Price Waterfall), calibración de elasticidades o diseño integral de gobernanza comercial para comités directivos.
+            </p>
+<div class="space-y-space-base">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Email Directo / Enquiries</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">advisory@rgmanalytics.expert</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Alcance Geográfico</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">LATAM (México, Colombia, Chile) &amp; USA / España</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono-caption text-mono-caption text-on-surface-variant">Tiempo de Respuesta</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">&lt; 24 Horas Hábiles (C-Level Priority)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Micro Credential -->
+<div class="pt-space-xl">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+                Proyectos ejecutados con estricta gobernanza de datos y acuerdos formales de no divulgación.
+              </span>
+</div>
+</div>
+</div>
+<!-- Right Side: Clean Enterprise Inquiry Form -->
+<div class="lg:col-span-7 p-space-xl">
+<form class="flex flex-col gap-space-base" id="enterpriseInquiryForm" onsubmit="handleInquirySubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-base">
+<!-- Nombre -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="fullName">Nombre Completo *</label>
+<input class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="fullName" placeholder="Ej. Roberto Menéndez" required="" type="text">
+</div>
+<!-- Correo Corporativo -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="workEmail">Correo Corporativo *</label>
+<input class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="workEmail" placeholder="nombre@empresa.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-base">
+<!-- Empresa / Industria -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="industry">Empresa / Industria *</label>
+<select class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="industry" required="">
+<option disabled="" selected="" value="">Seleccione Industria</option>
+<option value="CPG">Bebidas y Alimentos (CPG / FMCG)</option>
+<option value="Retail">Retail &amp; Supermercados / Cadenas</option>
+<option value="Pharma">Farmacia &amp; Cuidado Personal</option>
+<option value="Manufacturing">Manufactura Industrial &amp; B2B</option>
+<option value="SaaS">SaaS &amp; Servicios B2B</option>
+</select>
+</div>
+<!-- Cargo / Rol -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="role">Cargo / Rol Directivo *</label>
+<select class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="role" required="">
+<option disabled="" selected="" value="">Seleccione su Posición</option>
+<option value="CCO">Chief Commercial Officer (CCO)</option>
+<option value="VP_RGM">VP / Director de RGM &amp; Pricing</option>
+<option value="CFO">Chief Financial Officer (CFO)</option>
+<option value="GeneralManager">Gerente General / Country Manager</option>
+<option value="SalesDirector">Director Comercial / Ventas</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-base">
+<!-- Tipo de Proyecto -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="projectType">Tipo de Proyecto Requerido *</label>
+<select class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="projectType" required="">
+<option value="PricingStrategy">Estrategia &amp; Arquitectura de Precios</option>
+<option value="PromoROI">Optimización de Promociones (Trade ROI)</option>
+<option value="PPA">Arquitectura PPA (Price-Pack Architecture)</option>
+<option value="TradeTerms">Gobierno de Condiciones Comerciales (Trade Terms)</option>
+<option value="FullRGM">Auditoría &amp; Transformación Integral RGM</option>
+</select>
+</div>
+<!-- Presupuesto / Horizonte temporal -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="timeline">Horizonte Temporal Estimado</label>
+<select class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none" id="timeline">
+<option value="Inmediato">Inmediato (Próximas 2-4 semanas)</option>
+<option value="Q1">Durante el trimestre en curso</option>
+<option value="Planificacion">Planeación Estratégica / Ciclo Anual</option>
+</select>
+</div>
+</div>
+<!-- Contexto o desafío principal -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface uppercase" for="comments">Desafío Central de Precios o Margen (Opcional)</label>
+<textarea class="w-full bg-surface-container-low px-space-sm py-space-sm rounded-lg text-on-surface font-body-sm text-body-sm focus:bg-surface-container focus:outline-none resize-none" id="comments" placeholder="Ej. Necesitamos revisar la dispersión de descuentos off-invoice y modelar el impacto de un ajuste de precios en la categoría de snacks..." rows="3"></textarea>
+</div>
+<!-- Submit Button & Feedback -->
+<div class="pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<button class="inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary hover:bg-primary px-space-xl py-space-md rounded-lg font-label-md text-label-md transition-all shadow-md" type="submit">
+<span class="">Solicitar Diagnóstico Ejecutivo</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<span class="font-mono-caption text-mono-caption text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+                Respuesta directa por el Advisor
+              </span>
+</div>
+<!-- Success notification box (hidden by default) -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container-high text-primary font-body-sm text-body-sm flex items-center gap-space-xs mt-space-2xs" id="formSuccessNotice">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="">Solicitud recibida exitosamente. Recibirás un enlace de agendamiento y confirmación en tu correo en breve.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  let simulationState = 0;
+  function toggleSimulation() {
+    const optCurve = document.getElementById('optCurve');
+    const optPoint = document.getElementById('optPoint');
+    const statPrice = document.getElementById('statPrice');
+    const statMargin = document.getElementById('statMargin');
+    const btn = document.getElementById('simToggleBtn');
+
+    if (!optCurve || !optPoint || !statPrice || !statMargin || !btn) return;
+
+    if (simulationState === 0) {
+      // Scenario A: Higher Price Realization & Protected Margin
+      optCurve.setAttribute('d', 'M 45 40 Q 200 42 370 85');
+      optPoint.setAttribute('cx', '275');
+      optPoint.setAttribute('cy', '50');
+      statPrice.textContent = '$26.40 / pack (+6.4%)';
+      statMargin.textContent = '38.6% (+960 bps)';
+      btn.textContent = 'Restaurar Escenario Base';
+      simulationState = 1;
+    } else {
+      // Scenario B: Balanced Elasticity Sweet Spot
+      optCurve.setAttribute('d', 'M 45 45 Q 180 50 370 100');
+      optPoint.setAttribute('cx', '240');
+      optPoint.setAttribute('cy', '62');
+      statPrice.textContent = '$24.80 / pack';
+      statMargin.textContent = '34.2% (+520 bps)';
+      btn.textContent = 'Alternar Simulación (+4.5% Lift)';
+      simulationState = 0;
+    }
+  }
+
+  function handleInquirySubmit(e) {
+    e.preventDefault();
+    const notice = document.getElementById('formSuccessNotice');
+    if (notice) {
+      notice.classList.remove('hidden');
+      const form = document.getElementById('enterpriseInquiryForm');
+      if (form) {
+        const inputs = form.querySelectorAll('input, select, textarea, button');
+        inputs.forEach(el => {
+          if (el.tagName !== 'BUTTON') el.setAttribute('disabled', 'true');
+        });
+      }
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop pb-space-2xl"><div class="md:col-span-5 flex flex-col gap-space-sm"><a href="{{DATA:SCREEN:SCREEN_14}}" class="flex items-center gap-space-sm group"><img src="https://lh3.googleusercontent.com/aida/AEtjO1URiWD1evqt_h-OGGMpZRC_h60nlxF4czgUKAjShrJGhguKeYkKX-mKwRkGX-YIvnv6138P_R9Gv7iOYV6hfDH6Bhh7MAIr8H455J3XdUroG59K2AQn5BcYmQMqBGItd2ZnEbELbW-NMG3eqVaL6pTkLMqxGjgd_tCbtvEEbeoVB5fBsYMmPF4Fkg8aO0VMJ3KvXAyDojhJ5fNNFpRmcT-f9rU_Y9vr9dx1nsNEFiDE8-isq6HYUqcz0iE" alt="RGM &amp; Pricing Analytics Logo" class="w-8 h-8 rounded-lg object-contain opacity-90"><span class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Executive Advisory</span></a><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md pt-space-xs">Arquitectura estratégica de Revenue Growth Management, optimización algorítmica de elasticidades y gobierno integral de Trade Terms para corporaciones de consumo masivo y retail.</p><div class="pt-space-sm flex flex-wrap items-center gap-space-base"><a class="inline-flex items-center gap-space-xs text-secondary hover:text-on-surface font-body-sm text-body-sm transition-colors" href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">link</span><span class="">Conectar en LinkedIn</span></a><span class="text-outline-variant">•</span><a class="font-body-sm text-body-sm text-primary hover:underline font-semibold" href="{{DATA:SCREEN:SCREEN_2}}">Ver Metodología End-to-End →</a></div></div><div class="md:col-span-7 flex flex-col justify-start gap-space-sm"><div class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Índice de Dominios Analíticos &amp; Capacidades</div><div class="flex flex-wrap gap-space-xs pt-space-xs"><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Revenue Growth Management</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Pricing Analytics</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Elasticidad de Precios</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Trade Terms</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Mix Architecture</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Net Revenue Realization</span><span class="font-mono-caption text-mono-caption px-space-sm py-space-2xs rounded-lg bg-surface-container-low text-on-surface-variant">Promo ROI Optimization</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm"><p class="font-mono-caption text-mono-caption text-on-surface-variant">© 2024 Strategic RGM Advisory. Todos los derechos reservados.</p><div class="flex items-center gap-space-base"><span class="font-mono-caption text-mono-caption text-on-surface-variant">Institutional Precision • Confidential • Executive Advisory</span></div></div></div></footer>
+
+
+
+
+
+</body></html>
